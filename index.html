@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+
+	</head>
+	<style>
+		.container {
+			width: 400px;
+			height: 200px;
+			background-color: aliceblue;
+
+			position: relative;
+			margin: 150px auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			border: 2px solid #55557f;
+
+		}
+
+		.myForm {
+			width: 300px;
+			height: 100px;
+			/* background-color: antiquewhite; */
+
+		}
+
+		.myForm .submit-btn {
+			margin-top: 20px;
+
+		}
+		.btn{
+			border: #55557f 1px solid;
+			margin-top: 10px;
+			width: fit-content;
+			padding: 5px;
+		}
+		.btn:hover{
+			cursor: pointer;
+		}
+		.btn:active{
+			color: blue;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<div class="content">
+				<p>密码输入：</p>
+				<input type="password" class="pwd_input">
+				<div class="btn submit">提交</div>
+				<!-- <div class="btn exit">清除密码</div> -->
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			var pwd = '';
+			var flag = false;
+			
+			$('.submit').click(function() {
+				pwd = $('.pwd_input').val();
+				$.post('https://vercel-ver-api.vercel.app/api/ver_js', {'pwd': pwd}, (data_res, textStatus, jqxhr)=>{
+					
+					flag = data_res['verify_result'];
+					console.log("flag: " + flag);
+					if (flag == true) {
+						localStorage.setItem('ver', true);
+						window.location.href = 'pages/resume1.html';
+					} else {
+						localStorage.setItem('ver', false);
+						alert('密码错误');
+					}
+				})
+				
+			});
+			$('.exit').click(function() {
+				localStorage.clear();
+				alert('保存的密码已清除');
+			})
+
+			
+		</script>
+		
+	</body>
+</html>

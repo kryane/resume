@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- <script src="https://unpkg.com/vue@next"></script> -->
+		<link rel="stylesheet" href="../css/resume2.css">
+		<script src="../js/v3.2.8/vue.global.prod.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+		
+		<script type="text/javascript">
+			loginVerify();
+			function loginVerify() {
+				var ver = localStorage.getItem("ver")
+				if (ver == null || ver == 'false') {
+					window.location.href = '../index.html';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<div class="basic_info">
+				<div class="self_basic_text">
+					<div class="name">
+						aJream
+					</div>
+					<div class="other_info">
+						<span>188XXXXXXXX</span>
+						<span>/ 123456789@qq.com</span>
+						<span>/ 西安</span>
+						<span>/ 目标岗位：软件开发</span>
+					</div>
+
+
+				</div>
+				<div class="my_pic">
+					
+				</div>
+			</div>
+			<div class="edu_info">
+				<div class="title">
+					教育经历
+				</div>
+				<div class="detail_info">
+					<div class="school">
+						<span style="font-size: 22px; font-weight: 600;">XXXX大学</span>
+						<span>- XX工程</span>
+						<span>- 本科</span>
+						<span>- XXXX学院</span>
+						<span style="font-weight: 600; float: right; margin-right: 20px;">2019年09月 ~ 2023年06月</span>
+					</div>
+					<div class="other_info">
+						<ul>
+							<li>GPA: 3.xx/4.1</li>
+							<li>英语：CET-6</li>
+							<li>获奖：XXXX竞赛一等奖</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="skill_info">
+				<div class="title">
+					个人技能
+				</div>
+				<div class="skills">
+					<ol>
+						<li>拥有C++、Python、Java开发经验，熟悉Git、Linux基本操作</li>
+						<li>掌握Java集合、IO操作、多态、多线程、JVM组成及内存分区、垃圾回收机制</li>
+						<li>对Java常用SSM、SpringBoot框架以及MySQL数据库有使用经验</li>
+						<li>了解计算机网络体系及相关协议，如TCP/IP协议、http协议</li>
+					</ol>
+				</div>
+			</div>
+			<div class="project_info">
+				<div class="title">
+					项目经历
+				</div>
+				<div class="prjs">
+					<div class="prj">
+						<span style="font-weight: 600;">嵌入式智能家居系统</span>
+						<span>- 独自完成</span>
+						<span style="font-weight: 600; float: right; margin-right: 10px">2021年10月 ~ 2021年11月</span>
+						<p>
+							<ol>
+								<li>背景：利用STM32单片机开发平台和ESP8266WiFI模块实现一款简单的智能家居产品。</li>
+								<li>主要任务：通过采用MQTT协议实现设备之间的通信服务。</li>
+								<li>实现功能：使用C++编程和STM32采集周围温湿度、光照信息，ESP8266WIFI模块获取网
+							络时间和天气信息，并在TFTLCD屏幕显示；STM32将信息通过串口发送到ESP8266模块，再
+							通过MQTT协议与设计的Android APP进行通信</li>
+								<li>最终效果：<p>后端STM32驱动TFTLCD屏幕显示温湿度、光照信息、天气和时间信息、设定的报警温度和
+							最低光强，当温度大于报警温度可进行报警，光照低于最低光强可以自动开灯。
+							前端APP可以在联网情况下显示单片机采集到的环境信息，也可以远程设置最低光强和报警
+							温度，并能看到后端报警器和小灯是否处于打开的状态。</p></li>
+								<li>用到的技术：C/C++编程，单片机开发，HTTP请求的访问，MQTT协议的使用，MQTT服
+							务器配置，Java编程，Android开发等技术。</li>
+							</ol>
+							<!-- 1、背景：利用STM32单片机开发平台和ESP8266WiFI模块实现一款简单的智能家居产品。
+							2、主要任务：通过采用MQTT协议实现设备之间的通信服务。
+							3、实现功能：使用C++编程和STM32采集周围温湿度、光照信息，ESP8266WIFI模块获取网
+							络时间和天气信息，并在TFTLCD屏幕显示；STM32将信息通过串口发送到ESP8266模块，再
+							通过MQTT协议与设计的Android APP进行通信
+							4、最终效果：
+							后端STM32驱动TFTLCD屏幕显示温湿度、光照信息、天气和时间信息、设定的报警温度和
+							最低光强，当温度大于报警温度可进行报警，光照低于最低光强可以自动开灯。
+							前端APP可以在联网情况下显示单片机采集到的环境信息，也可以远程设置最低光强和报警
+							温度，并能看到后端报警器和小灯是否处于打开的状态。
+							5、用到的技术：C/C++编程，单片机开发，HTTP请求的访问，MQTT协议的使用，MQTT服
+							务器配置，Java编程，Android开发等技术 -->
+						</p>
+					</div>
+					
+					<div class="prj">
+						<!-- 
+						 树莓派火灾监控项目 - 独自完成 2020年11月 - 2020年12月
+						 在树莓派上安装Linux系统，利用Python编程，结合OpenCV图像处理模块以及自己训练的分
+						 类器，通过摄像头采集图像信息，并进行简单处理后判断是否有火情，然后驱动LED灯闪烁发
+						 出警报。
+
+						 -->
+						<span style="font-weight: 600;">树莓派火灾监控项目</span>
+						<span>- 独自完成</span>
+						<span style="font-weight: 600; float: right; margin-right: 10px">2020年11月 ~ 2020年12月</span>
+						<p style="margin: 10px 0 10px 20px;">
+							在树莓派上安装Linux系统，利用Python编程，结合OpenCV图像处理模块以及自己训练的分
+							类器，通过摄像头采集图像信息，并进行简单处理后判断是否有火情，然后驱动LED灯闪烁发
+							出警报。
+						</p>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="self_evaluate">
+				<div class="title">
+					自我评价
+				</div>
+				<div class="text-content">
+					<ol>
+						<li>热爱学习，喜欢探讨热门技术，活跃于各种技术平台</li>
+						<li>有记笔记和写博客 <a href="https://ajream.vercel.app" target="_blank">https://ajream.vercel.app</a>的习惯</li>
+						
+					</ol>
+				</div>
+			</div>
+			<div class="nav-s">
+				<div class="nav">
+					<a href="http://ajream.vercel.app" style="text-decoration: none;">我的博客</a>
+				</div>
+				<div class="nav">
+					<a href="resume1.html" style="text-decoration: none;">切换风格</a>
+				</div>
+				<div class="nav exit-btn">
+					退出
+				</div>
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			$('.exit-btn').click(function(){
+				localStorage.clear();
+				window.location.href = '../index.html';
+			})
+		</script>
+<!-- 		<script>
+			const App = {
+				data() {}
+			};
+			Vue.createApp(App).mount('#content');
+		</script> -->
+	</body>
+</html>

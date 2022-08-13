@@ -1,0 +1,160 @@
+body {
+	background-color: lightslategray;
+	font-family: sans-serif, 'Microsoft Yahei', 'Helvetica Neue';
+	zoom: 80%;
+	font-size: 20px;
+	color: #4f6873;
+}
+
+*{
+	margin: 0;
+}
+
+#content {
+	position: relative;
+	margin: 0 auto;  /* 居中 */
+	width: 1024px;
+	height: 1440px;
+	background-color: #fff;
+	padding-left: 20px;
+
+}
+
+.basic_info {
+	height: 12%;
+	/* background-color: #d3e8d0; */
+	/* border-bottom: #00aaff solid 1px; */
+	display: flex;
+	
+}
+
+.basic_info .self_basic_text{
+	
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+.basic_info .self_basic_text .name{
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.basic_info .self_basic_text .other_info{
+	margin-top: 10px;
+}
+
+.basic_info .self_basic_text .other_info span{
+	margin: 0 10px 0 0;
+}
+
+.basic_info .my_pic{
+	
+	width: 170px;
+	height: 200px;
+	margin-top: 20px;
+	position: relative;
+	margin: 2% auto;
+	/* border-radius: 50%; */
+	zoom: 60%;
+	background-color: #00aaff;
+	background-image: url(https://ajream.vercel.app/img/avatar5.png);
+	background-repeat: no-repeat;
+	/* background-size: auto 200px; */
+	
+	
+	
+}
+
+
+.edu_info {
+	height: 15%;
+	background-color: #fff;
+	
+}
+
+.title{
+	font-size: 26px;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom: #555 solid 2px;
+}
+
+.edu_info .school{
+	margin-top: 10px;
+	width: 100%;
+	/* background-color: aliceblue; */
+}
+
+.edu_info .school span{
+	margin-left: 10px;
+}
+
+.edu_info .other_info{
+	margin-top: 10px;
+}
+
+li{
+	margin-top: 8px;
+}
+
+.skill_info {
+	height: 15%;
+	background-color: #fff;
+	
+}
+
+.project_info {
+	height: 38%;
+	background-color: #fff;
+	
+}
+
+.project_info .prjs{
+	margin-top: 10px;
+	width: 98%;
+	margin-right: 40px;
+}
+
+.project_info .prjs .prj{
+	margin-top: 10px;
+}
+
+
+
+.self_evaluate {
+	height: 15%;
+	background-color: #fff;
+	
+}
+
+.nav-s{
+    font-size: 20px;
+    width: 120px;
+    height: 190px;
+    /* background-color: azure; */
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #295571;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    
+    background-color: #b0cfffde;
+}
+
+.nav:hover, .nav a:hover{
+    color: blueviolet;
+	cursor: pointer;
+}
