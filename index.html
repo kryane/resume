@@ -1,89 +1,138 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>登录</title>
-		<script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+<html lang="en" class=""><head>
+    <meta charset="UTF-8">
+    <title>简历生成器</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="static/js/script.js"></script>
+</head>
 
-	</head>
-	<style>
-		.container {
-			width: 400px;
-			height: 200px;
-			background-color: aliceblue;
+<body style="zoom: 1; padding-right: 0px;">
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait" style="background-image: url(&quot;https://ts1.cn.mm.bing.net/th/id/R-C.d0c6fe2d134a996838e9e7684cedb082?rik=8LyKUsdDnoSSSQ&amp;riu=http%3a%2f%2fb-ssl.duitang.com%2fuploads%2fitem%2f201701%2f11%2f20170111091937_4NF35.png&amp;ehk=mG%2fakpm4yFh3D4Xu05bCFt4x%2fnTmdDYGO9Fj63pzmlA%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&quot;);"></div>
+                
+                <h1 id="username" contenteditable="true">kryane</h1>
+                <h4 id="persona-tag" contenteditable="true">Python / Web&nbsp;</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title" contenteditable="true">基本信息</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label" contenteditable="true">姓名</label><span class="label-value" contenteditable="true">洪润</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">学历</label><span class="label-value" contenteditable="true">专科</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">毕业院校</label><span class="label-value" contenteditable="true">武汉职业技术学院</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">毕业年份</label><span class="label-value" contenteditable="true">2020</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont icon-call"></i> <span class="info-title" contenteditable="true">联系方式</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label" contenteditable="true">手机</label><span class="label-value" contenteditable="true">15207109573</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">邮箱</label><span class="label-value" contenteditable="true">2428907415@qq.com</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">个人主页</label><span class="label-value" contenteditable="true">www.cnblogs.com/kyrane</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">Github</label><span class="label-value" contenteditable="true">github.com/kryane</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                </ul>
+            </div>
+            <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title" contenteditable="true">技能点</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label" contenteditable="true">Python</label>
+                        <progress value="80" max="100"></progress>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">html/css</label>
+                        <progress value="70" max="100"></progress>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <label class="left-label" contenteditable="true">Javascript</label>
+                        <progress value="60" max="100"></progress>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    
+                </ul>
+            </div>
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title" contenteditable="true">技术栈</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="stack-list">
+                    <li>
+                        <label class="left-label" contenteditable="true">前端</label><span class="label-value" contenteditable="true">vuejs</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    
+                    <li>
+                        <label class="left-label" contenteditable="true">后端</label><span class="label-value" contenteditable="true">Flask、Node.js、MongoDB、MySQL、Redis</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    
+                    <li>
+                        <label class="left-label" contenteditable="true">其它</label><span class="label-value" contenteditable="true">python、java</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    
+                </ul>
+            </div>
 
-			position: relative;
-			margin: 150px auto;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+            
+            
+        </div>
+        <div class="main">
+            
+            <div class="work info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-work"></i> <span class="info-title" contenteditable="true">工作经历</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="experience-list">
+                    
+                    <li>
+                        <h3 contenteditable="true">实验楼－课程内容（实习）</h3>
+                        <p contenteditable="true">独自完成个人项目</p>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                </ul>
+            </div>
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-project"></i> <span class="info-title" contenteditable="true">个人项目</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3 contenteditable="true">基于 vue 的华为商城</h3>
+                        <p contenteditable="true">用jwt实现用户登录，vuex记录状态，加了短信验证码登录功能、注册功能，地址管理，面包屑，懒加载，分类，购物车，支付宝支付等等功能</p>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    <li>
+                        <h3 contenteditable="true">基于 vue 的后台管理系统</h3>
+                        <p contenteditable="true">
+                            使用mockjs模拟数据，echarts制作图像图表，增删改查等用户数据</p>
+                    <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li>
+                    
+                    
+                </ul>
+            </div>
+            
+            <div class="aboutme info-unit right-paragraph">
+                <h2 class="info-header"><i class="iconfont icon-flower"></i> <span class="info-title" contenteditable="true">自我评价</span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2>
+                <hr>
+                <p contenteditable="true">本人自学前端，对前端功能有着强烈的兴趣，学会了html、css、js、es6、axios、vuejs等一系列前端技术。空闲时也会去学习python领域，其中涉及了爬虫、数据分析等领域，还学会了mysql、mongodb、redis三个数据库的知识，会使用git工具上传代码。</p>
+            </div>
+        </div>
+    </div>
 
-			border: 2px solid #55557f;
 
-		}
 
-		.myForm {
-			width: 300px;
-			height: 100px;
-			/* background-color: antiquewhite; */
-
-		}
-
-		.myForm .submit-btn {
-			margin-top: 20px;
-
-		}
-		.btn{
-			border: #55557f 1px solid;
-			margin-top: 10px;
-			width: fit-content;
-			padding: 5px;
-		}
-		.btn:hover{
-			cursor: pointer;
-		}
-		.btn:active{
-			color: blue;
-		}
-	</style>
-
-	<body>
-		<div class="container">
-			<div class="content">
-				<p>密码输入：</p>
-				<input type="password" class="pwd_input">
-				<div class="btn submit">提交</div>
-				<!-- <div class="btn exit">清除密码</div> -->
-			</div>
-
-		</div>
-		<script type="text/javascript">
-			var pwd = '';
-			var flag = false;
-			
-			$('.submit').click(function() {
-				pwd = $('.pwd_input').val();
-				$.post('https://vercel-ver-api.vercel.app/api/ver_js', {'pwd': pwd}, (data_res, textStatus, jqxhr)=>{
-					
-					flag = data_res['verify_result'];
-					console.log("flag: " + flag);
-					if (flag == true) {
-						localStorage.setItem('ver', true);
-						window.location.href = 'pages/resume1.html';
-					} else {
-						localStorage.setItem('ver', false);
-						alert('密码错误');
-					}
-				})
-				
-			});
-			$('.exit').click(function() {
-				localStorage.clear();
-				alert('保存的密码已清除');
-			})
-
-			
-		</script>
-		
-	</body>
-</html>
+<div class="remodal-overlay remodal-is-closed" style="display: none;"></div><div class="remodal-wrapper remodal-is-closed" style="display: none;"><div class="remodal remodal-img remodal-is-initialized remodal-is-closed" data-remodal-id="portrait-modal" tabindex="-1">
+                    <h3 contenteditable="true">请输入图片URL地址：</h3>
+                    <br>
+                    <input type="text" id="avatar-url">
+                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+                </div></div><div class="remodal-wrapper remodal-is-closed" style="display: none;"><div class="remodal remodal-img remodal-is-initialized remodal-is-closed" data-remodal-id="weixin-modal" tabindex="-1">
+                <h3 contenteditable="true">请输入图片URL地址：</h3>
+                <br>
+                <input type="text" id="weixin-url">
+                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+            </div></div></body></html>
